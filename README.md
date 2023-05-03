@@ -1,5 +1,5 @@
 # CreateRelativePathShortcut
-This is a simple program that generates shortcuts (MS-SHLLINK) with relative paths
+This is a simple program that generates shortcuts [(MS-SHLLINK)](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-shllink/16cb4ca1-9339-4d0c-a68d-bf1d6cc0f943) with relative paths
 
 ## Usage
 
@@ -23,3 +23,10 @@ The following command line arguments are options:
 ```
 CreateRelativePathShortcut.exe /path:"bin\start.exe" /args:"--quiet --force" /iconpath:"%SystemRoot%\System32\imageres.dll" /iconindex:1 /output:"Relative Path Shortcut.lnk"
 ```
+
+## Credits
+
+This project leverages the following libraries:
+* [PropertyStore](https://github.com/securifybv/PropertyStore) by Securify
+* [ShellLink](https://github.com/securifybv/ShellLink) by Securify
+
