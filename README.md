@@ -25,6 +25,12 @@ The following command line arguments are options:
 CreateRelativePathShortcut.exe /path:"bin\start.exe" /args:"--quiet --force" /iconpath:"%SystemRoot%\System32\imageres.dll" /iconindex:1 /output:"Relative Path Shortcut.lnk /readonly"
 ```
 
+## Keeping It Relative
+
+When you launch an LNK file with a relative path, Windows automatically modifies the file to point to the absolute path, making the shortcuts created by this program good for only one time use.
+
+As a workaround, use the `/readonly` flag to set the generated LNK file as read-only, stopping Windows from modifying it.
+
 ## Credits
 
 This project leverages the following libraries:
