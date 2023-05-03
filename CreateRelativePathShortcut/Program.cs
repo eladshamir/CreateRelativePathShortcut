@@ -1,6 +1,7 @@
-﻿using Securify.ShellLink;
+using Securify.ShellLink;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -83,6 +84,12 @@ namespace CreateRelativePathShortcut
                     return;
                 }
             }
+            
+            bool readOnly = false;
+            if (arguments.ContainsKey("readonly"))
+            {
+                readOnly = true;
+            }
 
             try
             {
@@ -92,6 +99,12 @@ namespace CreateRelativePathShortcut
                 Console.WriteLine("[+] Relative path set to {0}", path);
                 shortcut.WriteToFile(output);
                 Console.WriteLine("[+] Shortcut saved to {0}", output);
+
+                if (readOnly)
+                {
+                    File.SetAttributes(output, File.GetAttributes(output) | FileAttributes.ReadOnly);
+                    Console.WriteLine("[+] The shortcut file is now read-only");
+                }
             }
             catch (Exception e)
             {
