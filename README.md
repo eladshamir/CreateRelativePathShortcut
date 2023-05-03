@@ -16,7 +16,7 @@ The following command line arguments are options:
 * args: Command line arguments
 * iconpath: The path of the icon file
 * iconindex: The index of the icon in the icon file
-* readonly: If present, sets the shortcut file to read-only
+* readonly: If present, sets the shortcut file to read-only (recommended)
 
 
 ### Example:
