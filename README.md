@@ -6,7 +6,6 @@ This is a simple program that generates shortcuts (MS-SHLLINK) with relative pat
 ```
 CreateRelativePathShortcut.exe 
 /path:<TARGET_PATH> /args:<CMD_LINE_ARGS> /iconpath:<ICON_PATH> /iconindex:<INT> /output:<OUTPUT_PATH>
-
 ```
 
 The following command line arguments are required:
